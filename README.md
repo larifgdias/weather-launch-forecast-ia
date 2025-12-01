@@ -1,88 +1,76 @@
-Weather Launch Forecast – IA aplicada a janelas de lançamento espacial
+# Weather Launch Forecast – IA aplicada a janelas de lançamento espacial
 
-Este repositório contém o código, dados e documentação do projeto Predição de Janelas de Lançamento Espacial a partir de Condições Meteorológicas com Modelos de Aprendizado de Máquina, desenvolvido no Programa de Capacitação em Inteligência Artificial Aplicada ao Setor Aeroespacial – Instituto HBR.
+Este repositório contém o código, dados e documentação do projeto **Predição de Janelas de Lançamento Espacial a partir de Condições Meteorológicas com Modelos de Aprendizado de Máquina**, desenvolvido no Programa de Capacitação em Inteligência Artificial Aplicada ao Setor Aeroespacial – Instituto HBR.
 
-Objetivo do projeto
+## 🎯 Objetivo do projeto
 
-Desenvolver um modelo de aprendizado de máquina capaz de prever, com até 48 horas de antecedência, a viabilidade de uma janela de lançamento espacial com base em variáveis meteorológicas extraídas do conjunto ERA5, integradas a dados históricos de missões.
+Desenvolver um modelo de aprendizado de máquina capaz de **prever, com até 48 horas de antecedência**, a viabilidade de uma janela de lançamento espacial com base em variáveis meteorológicas extraídas do conjunto **ERA5**, integradas a dados históricos de missões.
 
-O objetivo final é apoiar decisões de go/no-go, reduzindo riscos e impactos operacionais associados a lançamentos adiados.
+O objetivo final é apoiar decisões de **go/no-go**, reduzindo riscos e impactos operacionais associados a lançamentos adiados.
 
-Visão geral da solução
+## 📊 Visão geral da solução
 
 O pipeline inclui:
 
-Coleta de dados de lançamentos espaciais
+1. Coleta de dados de lançamentos espaciais  
+2. Extração de variáveis meteorológicas ERA5  
+3. Engenharia de atributos  
+4. Treinamento de modelos supervisionados  
+   - Regressão Logística  
+   - Gradient Boosting  
+   - XGBoost  
+5. Avaliação temporal (time-split)  
+6. Interpretação dos modelos via SHAP  
+7. Geração do artigo final (`docs/Dias_2025_Predicao_Janelas_Lancamento_Meteorologia_IA.pdf`)
 
-Extração de variáveis meteorológicas ERA5
+O **Gradient Boosting** apresentou o melhor desempenho geral.
 
-Engenharia de atributos
+## 🧠 Principais variáveis meteorológicas utilizadas
 
-Treinamento de modelos supervisionados
+- velocidade do vento  
+- rajadas máximas  
+- precipitação acumulada  
+- tendência da pressão  
+- cobertura de nuvens  
 
-Regressão Logística
+## 📂 Estrutura do repositório
 
-Gradient Boosting
-
-XGBoost
-
-Avaliação temporal (time-split)
-
-Interpretação dos modelos via SHAP
-
-Geração do artigo final
-
-O Gradient Boosting apresentou o melhor desempenho geral.
-
-Principais variáveis meteorológicas utilizadas
-
-velocidade do vento
-
-rajadas máximas
-
-precipitação acumulada
-
-tendência da pressão
-
-cobertura de nuvens
-
-📂 Estrutura do repositório
-src/
-    modeling.ipynb
-data/
-    README.md
-docs/
-    artigo_final.pdf
-README.md
-requirements.txt
-
-Obtenção dos dados ERA5
-
-Os dados meteorológicos utilizados foram extraídos do ERA5 via Climate Data Store (CDS):
-
-https://cds.climate.copernicus.eu/
-
-O arquivo data/README.md contém instruções detalhadas.
-
-Como executar
-
-Clone este repositório:
-
-git clone https://github.com/SEU_USUARIO/weather-launch-forecast-ia
+weather-launch-forecast-ia/
+├── src/
+│ └── modeling.ipynb
+├── data/
+│ └── README.md
+├── docs/
+│ └── Dias_2025_Predicao_Janelas_Lancamento_Meteorologia_IA.pdf
+├── README.md
+└── requirements.txt
 
 
-Instale dependências:
+## 📥 Obtenção dos dados ERA5
 
+Os dados meteorológicos utilizados foram extraídos do **ERA5** via Climate Data Store (CDS).
+
+Link: https://cds.climate.copernicus.eu/
+
+O arquivo `data/README.md` contém instruções detalhadas para acesso via API e download manual.
+
+## ▶️ Como executar
+
+1. Clone este repositório:
+```
+git clone https://github.com/larifgdias/weather-launch-forecast-ia
+```
+2. Instale dependências:
+```
 pip install -r requirements.txt
-
-
-Abra o notebook:
-
+```
+3. Execute o notebook:
+```
 jupyter notebook src/modeling.ipynb
+```
+📑 Documentação
 
-Documentação
-
-O artigo final está disponível em:
+O artigo técnico final está disponível em:
 📄 docs/Dias_2025_Predicao_Janelas_Lancamento_Meteorologia_IA.pdf
 
 🎥 Apresentação (em breve)
@@ -93,3 +81,4 @@ Link do vídeo: (a inserir)
 
 Larissa Fernanda Gonçalves Dias
 Programa de Capacitação em Inteligência Artificial Aplicada ao Setor Aeroespacial – Instituto HBR
+Email: larifgdias@gmail.com
