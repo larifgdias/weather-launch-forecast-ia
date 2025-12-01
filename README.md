@@ -21,7 +21,7 @@ O pipeline inclui:
    - XGBoost  
 5. Avaliação temporal (time-split)  
 6. Interpretação dos modelos via SHAP  
-7. Geração do artigo final (`docs/Dias_2025_Predicao_Janelas_Lancamento_Meteorologia_IA.pdf`)
+7. Geração do artigo final (`blob/main/Dias_2025_Predicao_Janelas_Lancamento_Meteorologia_IA.pdf`)
 
 O **Gradient Boosting** apresentou o melhor desempenho geral.
 
@@ -40,7 +40,7 @@ weather-launch-forecast-ia/
 │ └── modeling.ipynb
 ├── data/
 │ └── README.md
-├── docs/
+├── blob/main/
 │ └── Dias_2025_Predicao_Janelas_Lancamento_Meteorologia_IA.pdf
 ├── README.md
 └── requirements.txt
@@ -71,7 +71,7 @@ jupyter notebook src/modeling.ipynb
 📑 Documentação
 
 O artigo técnico final está disponível em:
-📄 docs/Dias_2025_Predicao_Janelas_Lancamento_Meteorologia_IA.pdf
+📄 blob/main/Dias_2025_Predicao_Janelas_Lancamento_Meteorologia_IA.pdf
 
 🎥 Apresentação (em breve)
 
